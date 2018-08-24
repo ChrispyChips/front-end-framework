@@ -15,7 +15,20 @@ module.exports = {
             {
                 loader: 'babel-loader',
                 query: {
-                    presets: ['babel-preset-env']
+                    presets: [
+                        [
+                            "env",
+                            {
+                                "targets": {
+                                    "browsers": [
+                                        "last 2 versions",
+                                        "safari >= 7",
+                                        "ie >= 11"
+                                    ]
+                                }
+                            }
+                        ]
+                    ]
                 },
                 test: /\.js$/,
                 exclude: /node_modules/
