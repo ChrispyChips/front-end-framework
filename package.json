@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "buildDist": "gulp build --dist",
-    "buildDocs": "gulp build --docs"
+    "buildDocs": "gulp build --docs",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
