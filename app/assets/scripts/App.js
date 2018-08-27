@@ -1,5 +1,1 @@
-// const x = ()=>{
-//   alert('x');
-// };
-//
-// x();
+import 'bootstrap';
