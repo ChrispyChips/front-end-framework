@@ -6,7 +6,8 @@
   "scripts": {
     "buildDist": "gulp build --dist",
     "buildDocs": "gulp build --docs",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "previewDist": "gulp previewDist"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const watch = require('gulp-watch');
+const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
 gulp.task('watch',['styles', 'scripts'], () => {
@@ -15,7 +16,7 @@ gulp.task('watch',['styles', 'scripts'], () => {
 
     //Watch changes on scss and run cssInject gulp task
     watch('./app/assets/styles/**/*.scss', () => {
-        gulp.start('cssInject');
+        gulp.start('styles');
     });
 
     //watch changes on js files in assets trigger gulp task scriptsRefresh
@@ -25,8 +26,10 @@ gulp.task('watch',['styles', 'scripts'], () => {
 });
 
 //Waits for styles gulp task to finish then because our temp folder has the new css thanks to styles task we add it to stream
-gulp.task('cssInject', ['styles'], () => {
-    return gulp.src('./app/temp/styles/styles.css')
+gulp.task('styles', () => {
+    return gulp.src('./app/assets/styles/style.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./app/temp/styles'))
         .pipe(browserSync.stream());
 });
 
