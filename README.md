@@ -30,3 +30,8 @@ This command takes assets from app/assets and compiles them into a temp folder. 
 * assets/styles/styles.scss ( @import 'modules/navigation'; )
 
 ## Get started quick
+**Navigate to project folder and run the following command**
+* npm run watch (After seeing this open your localhost browser end the session with CTRL + C in terminal)
+**Once finishing development locally go ahead and run build tasks**
+* npm run buildDocs / npm run buildDist
+* npm run previewDist !(not previewDocs)!
