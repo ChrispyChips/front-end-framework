@@ -6321,3 +6321,6 @@ p.someParagraph {
   line-height: 20px;
   text-align: center;
   font-weight: 700; }
+  @media (min-width: 1024px) {
+    p.someParagraph {
+      font-size: 30px; } }
